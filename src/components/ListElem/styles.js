@@ -1,26 +1,35 @@
 import { StyleSheet } from "react-native";
+import colors from "../../utils/colors";
 
 export const styles = StyleSheet.create({
   listContainer: {
     flex: 1,
     flexDirection: "row",
-    backgroundColor: "#000",
     gap: 10,
+    alignItems: "center",
+    paddingBottom: 7
+  },
+  textContainer: {
+    flex: 4,
+    justifyContent: "center",
+    color: colors.white,
+    paddingLeft: 10,
     borderWidth: 1,
     borderRadius: 6,
-    borderColor: "#9b9b9b",
+    borderColor: colors.gray,
+    height: '100%'
   },
   text: {
-    flex: 4,
-    color: "#000",
+    color: colors.white,
   },
   icon: {
-    flex: 1,
-    backgroundColor: "#A8DADC",
+    flex: 0.5,
+    alignItems: 'center', 
+    justifyContent: 'center',
+    backgroundColor: colors.blue.level3,
     borderRadius: 6,
-    borderColor: "#9b9b9b",
+    borderColor: colors.gray,
     borderWidth: 1,
-    padding: 10,
     height: 40,
   },
 });

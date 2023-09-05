@@ -26,7 +26,7 @@ export default function Home() {
         <Button onPress={addProduct} />
       </View>
       <View style={styles.listContainer}>
-        <Text>Lista de compras</Text>
+        <Text style={styles.listTitle}>Lista de compras</Text>
         <FlatList
           data={products}
           keyExtractor={(item) => item.id}

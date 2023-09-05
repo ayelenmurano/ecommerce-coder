@@ -17,5 +17,8 @@ export const styles = StyleSheet.create({
     flex: 1,
     flexDirection:'column',
     paddingVertical: 10,
+  },
+  listTitle: {
+    paddingBottom: 7
   }
 });

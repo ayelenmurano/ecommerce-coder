@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: colors.blue.level3,
+    backgroundColor: colors.blue.level2,
     borderRadius: 6,
     borderColor: colors.gray,
     borderWidth: 1,
@@ -14,6 +14,6 @@ export const styles = StyleSheet.create({
     height: 40,
   },
   text: {
-    color: colors.black,
+    color: colors.white,
   },
 });

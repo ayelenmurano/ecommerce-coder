@@ -8,6 +8,7 @@ const Input = ({ onChangeText, value }) => {
       <TextInput
         style={styles.input}
         value={value}
+        placeholder="Search product..."
         onChangeText={(text) => onChangeText(text)}
       />
     </View>

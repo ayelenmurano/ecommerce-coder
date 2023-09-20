@@ -1,17 +1,13 @@
 import { Text, TouchableOpacity, View } from "react-native";
 import { styles } from "./styles";
 
-const CategoryItem = ({ name, setCategory }) => {
-  const searchCategory = () => {
-    console.log('la categoria ', name)
-    setCategory(name);
-  };
+const ClassItem = ({ name, navigation }) => {
   return (
     <View style={styles.container}>
       <TouchableOpacity
         activeOpacity={0.8}
         onPress={() => {
-          searchCategory();
+          navigation.navigate("Calendar", { category: name });
         }}
         style={styles.textContainer}
       >
@@ -21,4 +17,4 @@ const CategoryItem = ({ name, setCategory }) => {
   );
 };
 
-export default CategoryItem;
+export default ClassItem;

@@ -8,17 +8,7 @@ export const styles = StyleSheet.create({
     rowGap: 20,
     flexDirection: "column",
     justifyContent: "flex-start",
-    alignItems: 'center'
-    // backgroundColor: "red",
+    alignItems: "center",
   },
-  image: {
-    height: 300,
-    width: 300,
-    resizeMode: "cover",
-    borderRadius: 150,
-  },
-  title: {
-    textAlign: "center",
-    // fontFamily: "Josefin-Sans"
-  },
+  flatList: {},
 });

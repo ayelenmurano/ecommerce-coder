@@ -1,38 +1,21 @@
-import { AntDesign, Entypo, Feather } from "@expo/vector-icons";
+import { Entypo } from "@expo/vector-icons";
 import React from "react";
-import { TouchableOpacity, View } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 import { styles } from "./styles";
 
-const Header = ({ activeSearch, handleSearchBox, switchPage }) => {
+const Header = ({  }) => {
   return (
     <View style={styles.container}>
-      <View style={styles.headerContainer}>
+      <View style={styles.menuIcon}>
         <TouchableOpacity activeOpacity={0.8} onPress={() => {}}>
           <Entypo name="menu" size={24} color="white" />
         </TouchableOpacity>
+      </View>
 
-        <View style={styles.leftHeader}>
-          <TouchableOpacity
-            activeOpacity={0.8}
-            onPress={() => {
-              switchPage("home");
-            }}
-          >
-            <Entypo name="home" size={24} color="white" />
-          </TouchableOpacity>
-          <TouchableOpacity
-            activeOpacity={0.8}
-            onPress={() => {
-              handleSearchBox();
-            }}
-          >
-            {activeSearch ? (
-              <AntDesign name="close" size={24} color="white" />
-            ) : (
-              <Feather name="search" size={24} color="white" />
-            )}
-          </TouchableOpacity>
-        </View>
+      <View style={styles.brand}>
+        <TouchableOpacity activeOpacity={0.8} onPress={() => {}}>
+          <Text>AyeFit</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );

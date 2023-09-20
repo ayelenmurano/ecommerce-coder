@@ -3,7 +3,6 @@ import { styles } from "./styles";
 
 const ProductItem = ({ name, price, brand, image }) => {
   const searchCategory = () => {};
-  console.log("la image ", image);
   return (
     <View style={styles.container}>
       <TouchableOpacity

@@ -2,14 +2,10 @@ import { StyleSheet } from "react-native";
 import colors from "../../utils/colors";
 
 export const styles = StyleSheet.create({
-  container: {},
-  menuIcon: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
+  container: {
     backgroundColor: colors.blue.level3,
-    height: 40,
-    paddingHorizontal: 10,
+    height: "100%",
+    display: "absolute",
+    flex: 1,
   },
-  brand: {},
 });

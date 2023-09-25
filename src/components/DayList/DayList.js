@@ -7,7 +7,7 @@ import { styles } from "./styles";
 const DayList = ({ navigation, category, day }) => {
   return (
     <View style={styles.container}>
-      <Text>Día: {day}</Text>
+      <Text style={styles.day}>Día: {day}</Text>
       <View style={styles.list}>
         <FlatList
           data={calendarData.filter(({ date, category: currentCategory }) => {

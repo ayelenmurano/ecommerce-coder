@@ -1,28 +1,24 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { useFonts } from "expo-font";
-import { useCallback } from "react";
 import { StyleSheet } from "react-native";
+import { Provider } from "react-redux";
 import TabNavigator from "./src/Navigator/TabNavigator";
+import { store } from "./src/store";
 import { fonts } from "./src/utils/fonts";
 
 export default function App() {
   const [fontsLoaded] = useFonts(fonts);
-
-  const onLayoutRootView = useCallback(async () => {
-    if (fontsLoaded) {
-      await SplashScreen.hideAsync();
-    }
-  }, [fontsLoaded]);
   
   if (fontsLoaded === false) {
-    console.log('i am here')
     return;
   }
 
   return (
+    <Provider store={store}>
     <NavigationContainer>
       <TabNavigator />
     </NavigationContainer>
+    </Provider>
   );
 }
 

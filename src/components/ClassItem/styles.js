@@ -6,33 +6,38 @@ export const styles = StyleSheet.create({
     width: "100%",
     alignItems: "center",
     paddingBottom: 15,
-    height: 50,
+    height: 120,
   },
-  textContainer: {
-    flex: 4,
-    width: "60%",
+  buttonContainer: {
+    width: "100%",
     alignItems: "center",
     justifyContent: "center",
     color: colors.white,
-    paddingLeft: 10,
     borderWidth: 1,
     borderRadius: 10,
-    borderColor: colors.gray,
-    backgroundColor: colors.blue.level3,
+    borderColor: colors.black,
     height: "100%",
   },
-  text: {
-    color: colors.white,
-    textTransform: "capitalize",
+  image: {
+    width: "100%",
+    height: "100%",
+    alignItems: 'flex-end',
+    justifyContent: 'flex-end'
   },
-  icon: {
-    flex: 0.5,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: colors.blue.level3,
-    borderRadius: 6,
-    borderColor: colors.gray,
+  textContainer: {
+    width: "60%",
+    alignItems: 'flex-end',
+    backgroundColor: "white",
     borderWidth: 1,
-    height: 40,
+    borderRadius: 10,
+    borderColor: colors.black,
+  },
+  text: {
+    paddingRight: 10,
+    paddingVertical: 5,
+    color: colors.black,
+    textTransform: "capitalize",
+    fontFamily: 'Mulish',
+    fontWeight: 'bold'
   },
 });

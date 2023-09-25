@@ -1,29 +1,46 @@
 import { StyleSheet } from "react-native";
 import colors from "../../utils/colors";
 
+const textProperties = {
+  fontFamily: "JosefinSans",
+  color: colors.black,
+  textTransform: "capitalize",
+};
 export const styles = StyleSheet.create({
   container: {
     width: "100%",
     alignItems: "center",
     paddingBottom: 15,
-    height: 100,
+    height: 120,
   },
   textContainer: {
     flex: 4,
     width: "90%",
-    alignItems: "center",
     justifyContent: "center",
     color: colors.white,
-    paddingLeft: 10,
+    paddingVertical: 30,
+    paddingHorizontal: 20,
     borderWidth: 1,
     borderRadius: 10,
-    borderColor: colors.gray,
-    backgroundColor: colors.blue.level3,
+    borderColor: colors.black,
+    backgroundColor: colors.white,
     height: "100%",
   },
-  text: {
-    color: colors.white,
-    textTransform: "capitalize",
+  category: {
+    ...textProperties,
+    fontWeight: "bold",
+  },
+  time: {
+    ...textProperties,
+    fontWeight: "600",
+    lineHeight: 13,
+    fontSize: 12,
+    paddingBottom: 4,
+  },
+  places: {
+    ...textProperties,
+    fontWeight: "bold",
+    fontSize: 12,
   },
   icon: {
     flex: 0.5,

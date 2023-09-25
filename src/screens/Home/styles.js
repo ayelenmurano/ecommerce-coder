@@ -19,6 +19,8 @@ export const styles = StyleSheet.create({
   },
   title: {
     textAlign: "center",
-    // fontFamily: "Josefin-Sans"
+    fontFamily: "Mulish",
+    fontSize: 20,
+    fontWeight: 'bold'
   },
 });

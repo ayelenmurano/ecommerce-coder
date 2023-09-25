@@ -15,9 +15,11 @@ const ClassesList = ({ navigation }) => {
         <FlatList
           data={classes}
           keyExtractor={(item) => item.id}
-          renderItem={({ item }) => (
-            <ClassItem name={item.name} navigation={navigation} />
-          )}
+          renderItem={({
+            item: {
+              name: { name, image },
+            },
+          }) => <ClassItem name={name} image={image} navigation={navigation} />}
         />
       </View>
     </View>

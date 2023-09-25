@@ -5,7 +5,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     gap: 10,
     alignItems: "center",
-    width: "100%",
+    width: 170,
   },
   titleContainer: {},
   title: {},
@@ -16,4 +16,8 @@ export const styles = StyleSheet.create({
     paddingVertical: 10,
   },
   text: {},
+  day: {
+    fontFamily: "Mulish",
+    fontSize: 16,
+  }
 });

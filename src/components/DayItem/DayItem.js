@@ -11,9 +11,9 @@ const DayItem = ({ category, time, places, navigation }) => {
         }}
         style={styles.textContainer}
       >
-        <Text style={styles.text}>{category}</Text>
-        <Text style={styles.text}>Hora: {time}</Text>
-        <Text style={styles.text}>Lugares disponibles: {places}</Text>
+        <Text style={styles.category}>{category}</Text>
+        <Text style={styles.time}>Hora: {time}</Text>
+        <Text style={styles.places}>Lugares disponibles: {places}</Text>
       </TouchableOpacity>
     </View>
   );

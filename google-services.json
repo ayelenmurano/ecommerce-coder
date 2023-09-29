@@ -1,0 +1,31 @@
+
+{
+    "project_info": {
+      "project_number": "263889688118",
+      "firebase_url": "https://gymapp-ayefit-default-rtdb.firebaseio.com",
+      "project_id": "gymapp-ayefit",
+      "storage_bucket": "gymapp-ayefit.appspot.com"
+    },
+    "client": [
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:263889688118:android:415a47a194772a4fe9ea97",
+          "android_client_info": {
+            "package_name": "aye.fit2023"
+          }
+        },
+        "oauth_client": [],
+        "api_key": [
+          {
+            "current_key": "AIzaSyCQXAWYRll09UQOJ98_c2HYG1MYE6DT6dE"
+          }
+        ],
+        "services": {
+          "appinvite_service": {
+            "other_platform_oauth_client": []
+          }
+        }
+      }
+    ],
+    "configuration_version": "1"
+  }

@@ -1,4 +1,4 @@
-import { Entypo, MaterialIcons } from "@expo/vector-icons";
+import { MaterialIcons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Text, TouchableOpacity } from "react-native";
 import CalendarStackNavigator from "./CalendarStackNavigator";
@@ -33,15 +33,6 @@ export default function TabNavigator() {
         tabBarActiveTintColor: "tomato",
         tabBarInactiveTintColor: "gray",
         title: "",
-        headerLeft: () => (
-          <TouchableOpacity
-            activeOpacity={0.8}
-            onPress={() => {}}
-            style={styles.headerItems}
-          >
-            <Entypo name="menu" size={24} color="white" />
-          </TouchableOpacity>
-        ),
         headerRight: () => (
           <TouchableOpacity
             activeOpacity={0.8}
@@ -58,6 +49,7 @@ export default function TabNavigator() {
         headerTitleStyle: {
           fontWeight: "bold",
         },
+        headerShown: false,
       })}
     >
       <Tab.Screen name="CalendarTab" component={CalendarStackNavigator} />

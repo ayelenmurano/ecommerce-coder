@@ -2,9 +2,7 @@ import { StyleSheet } from "react-native";
 import colors from "../../utils/colors";
 
 export const styles = StyleSheet.create({
-  inputContainer: {
-    flex: 4,
-  },
+  inputContainer: {},
   input: {
     paddingHorizontal: 10,
     paddingVertical: 5,
@@ -12,5 +10,6 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     height: 40,
     borderRadius: 6,
-  }
+    fontFamily: "Mulish",
+  },
 });

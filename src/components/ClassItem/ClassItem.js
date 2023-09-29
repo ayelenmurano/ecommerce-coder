@@ -1,6 +1,6 @@
 import { ImageBackground, Text, TouchableOpacity, View } from "react-native";
 import { useDispatch } from "react-redux";
-import { setSelectedCategory } from "../../features/ui";
+import { setSelectedCategory } from "../../redux/slices/ui";
 import { styles } from "./styles";
 
 const ClassItem = ({ name, navigation }) => {
@@ -25,12 +25,12 @@ const ClassItem = ({ name, navigation }) => {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container} key={name}>
       <TouchableOpacity
         activeOpacity={0.8}
         onPress={() => {
           dispatch(setSelectedCategory(name));
-          navigation.navigate("Calendar");
+          navigation.navigate("CalendarTab");
         }}
         style={styles.buttonContainer}
       >

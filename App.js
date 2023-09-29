@@ -1,23 +1,23 @@
-import { NavigationContainer } from "@react-navigation/native";
 import { useFonts } from "expo-font";
 import { StyleSheet } from "react-native";
+import "react-native-gesture-handler";
 import { Provider } from "react-redux";
-import TabNavigator from "./src/Navigator/TabNavigator";
-import { store } from "./src/store";
+import MainNav from "./src/Navigator/MainNav";
+import { store } from "./src/redux/store";
 import { fonts } from "./src/utils/fonts";
 
 export default function App() {
   const [fontsLoaded] = useFonts(fonts);
-  
+
   if (fontsLoaded === false) {
     return;
   }
 
   return (
     <Provider store={store}>
-    <NavigationContainer>
-      <TabNavigator />
-    </NavigationContainer>
+      {/* <SafeAreaView> */}
+      <MainNav />
+      {/* </SafeAreaView> */}
     </Provider>
   );
 }

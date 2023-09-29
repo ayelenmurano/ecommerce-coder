@@ -2,13 +2,13 @@ import React from "react";
 import { TextInput, View } from "react-native";
 import { styles } from "./styles";
 
-const Input = ({ onChangeText, value }) => {
+const Input = ({ onChangeText, value, name }) => {
   return (
     <View style={styles.inputContainer}>
       <TextInput
         style={styles.input}
         value={value}
-        placeholder="Search product..."
+        placeholder={name}
         onChangeText={(text) => onChangeText(text)}
       />
     </View>

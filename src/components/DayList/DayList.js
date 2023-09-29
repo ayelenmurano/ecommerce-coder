@@ -1,16 +1,18 @@
 import React from "react";
-import { FlatList, Text, View } from "react-native";
-import { calendarData } from "../../data/calendarData";
+import { ActivityIndicator, FlatList, Text, View } from "react-native";
+import { useGetCalendarQuery } from "../../services/dataApi";
 import { DayItem } from "../DayItem";
 import { styles } from "./styles";
 
 const DayList = ({ navigation, category, day }) => {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.day}>Día: {day}</Text>
-      <View style={styles.list}>
+  const { data, isLoading, error } = useGetCalendarQuery();
+
+  const renderList = () => {
+    if (isLoading) return <ActivityIndicator size="large" />;
+    if (!error && data)
+      return (
         <FlatList
-          data={calendarData.filter(({ date, category: currentCategory }) => {
+          data={data.filter(({ date, category: currentCategory }) => {
             return (
               date.slice(8, 10) === day.toString() &&
               (category ? category === currentCategory : true)
@@ -26,7 +28,13 @@ const DayList = ({ navigation, category, day }) => {
             />
           )}
         />
-      </View>
+      );
+    return null;
+  };
+  return (
+    <View style={styles.container}>
+      <Text style={styles.day}>Día: {day}</Text>
+      <View style={styles.list}>{renderList()}</View>
     </View>
   );
 };
